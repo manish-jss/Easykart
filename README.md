@@ -1,10 +1,25 @@
-![](media/FoodiumHeader.png)
+<p align="center">
+<img src="/app/src/main/res/drawable/app_logo.png"/>
+</p>
 
-# Easykart 👜 
+<h1 align="center"># Easykart 👜 </h1>
 
 
-**Easykart** is a sample Ecomerce 👜 Android application 📱 built to demonstrate use of *Modern Android development* tools.  
+<p align="center">  
+**Easykart** is a sample Ecomerce 👜 Android application 📱 built to demonstrate use of *Modern Android development* tools. This project mainly contains Compose Navigation, Coroutines, Hilt, Retrofit, and all the UI created in Jetpack Compose 👜 .
+</p>
 
+
+## Screenshot 📱
+<p>
+<img src="/art/Screenshot_20230804-125257.png" width="220" height="450"/>
+<img src="/art/Screenshot_20230804-125310.png" width="220" height="450"/>
+<img src="/art/Screenshot_20230804-125319.png" width="220" height="450"/>
+<img src="/art/Screenshot_20230729-150337.png" width="220" height="450"/>
+<img src="/art/Screenshot_20230729-150350.png" width="220" height="450"/>
+<img src="/art/Screenshot_20230729-150403.png" width="220" height="450"/>
+<img src="/art/Screenshot_20230729-150429.png" width="220" height="450"/>
+</p>
 
 
 ## About
