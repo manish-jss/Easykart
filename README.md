@@ -1,1 +1,1 @@
-# Easykart![ic_launcher-web](https://github.com/manish-jss/Easykart/assets/46521752/30ab3f2c-bc82-4d82-9ca9-01f2785deb51)
+![ic_launcher](https://github.com/manish-jss/Easykart/assets/46521752/e3ef00d6-330e-4833-91cc-8be193cb58a5)
