@@ -1,9 +1,7 @@
 <p align="center">
 <img src="/art/app_logo.png"/>
 </p>
-
 <h1 align="center"># Easykart 👜 </h1>
-
 
 <p align="center">  
 **Easykart** is a sample Ecomerce 👜 Android application 📱 built to demonstrate use of *Modern Android development* tools. This project mainly contains Compose Navigation, Coroutines, Hilt, Retrofit, and all the UI created in Jetpack Compose 👜 .
