@@ -2,12 +2,13 @@ package com.sample.easykart.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
+val PrimaryDark = Color(0xFFFFEB3B)
+val SecondaryDark = Color(0xFFFFEE58)
+val TertiaryDark = Color(0xFFFFF176)
 
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+val Primary = Color(0xFFf4ad49)
+val Secondary = Color(0xFFFBC02D)
+val Tertiary = Color(0xFFFDD835)
+
 val GREEN_DARK = Color(0xFF3D8361)
 val LIGHT_GRAY = Color(0xFFfefefe)
