@@ -15,6 +15,8 @@ It simply loads **Posts** data from API.
 *Dummy API is used in this app. API documentation is [here](https://fakestoreapi.com/docs)*.
 
 ## Built With 🛠
+- [Jetpack Compose](https://developer.android.com/jetpack/compose) - UI creation library
+- [Compose Navigation](https://developer.android.com/jetpack/compose/navigation) - Navigate between Compose Screen
 - [Kotlin](https://kotlinlang.org/) - First class and official programming language for Android development.
 - [Coroutines](https://kotlinlang.org/docs/reference/coroutines-overview.html) - For asynchronous and more..
 - [Flow](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/) - A cold asynchronous data stream that sequentially emits values and completes normally or with an exception.
