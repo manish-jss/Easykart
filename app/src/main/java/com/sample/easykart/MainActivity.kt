@@ -3,13 +3,11 @@ package com.sample.easykart
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.sample.easykart.ui.navigation.NavHost
-import com.sample.easykart.ui.screens.productlist.ProductListScreen
+import com.sample.easykart.ui.navigation.BottomBar
 import com.sample.easykart.ui.theme.EasykartTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -25,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    NavHost()
+                    BottomBar()
                 }
             }
         }

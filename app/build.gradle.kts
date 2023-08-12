@@ -84,6 +84,7 @@ dependencies {
     // navigation in compose
     implementation ("androidx.navigation:navigation-compose:2.6.0")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
+    implementation("androidx.compose.material:material:1.4.3")
 
 
 
