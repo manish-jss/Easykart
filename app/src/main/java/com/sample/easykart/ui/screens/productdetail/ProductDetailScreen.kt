@@ -44,28 +44,12 @@ import com.sample.easykart.ui.theme.GREEN_DARK
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ProductDetailScreen(onBackClick: () -> Unit) {
+fun ProductDetailScreen() {
     val viewModel: ProductDetailViewModel = hiltViewModel()
     val productItem = viewModel.productDetail.collectAsState().value
 
     Column(modifier = Modifier.fillMaxWidth(1f)) {
-        TopAppBar(title = {
-            Text(
-                text = stringResource(id = R.string.app_name),
-                textAlign = TextAlign.Center,
-                modifier = Modifier.fillMaxWidth(1f)
-            )
-        }, colors = TopAppBarDefaults.mediumTopAppBarColors(
-            containerColor = MaterialTheme.colorScheme.primary,
-            titleContentColor = MaterialTheme.colorScheme.onPrimary,
-            navigationIconContentColor = MaterialTheme.colorScheme.onPrimary,
-            actionIconContentColor = MaterialTheme.colorScheme.onSecondary
-        ),
-            navigationIcon = {
-                IconButton(onClick = onBackClick) {
-                    Icon(Icons.Filled.ArrowBack, null)
-                }
-            })
+
         Column(
             modifier = Modifier
                 .padding(8.dp)
@@ -118,5 +102,5 @@ fun ProductDetailScreen(onBackClick: () -> Unit) {
 @Preview
 @Composable
 fun PrevDetailScreen() {
-    ProductDetailScreen() {}
+    ProductDetailScreen()
 }

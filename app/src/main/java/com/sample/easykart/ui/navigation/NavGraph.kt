@@ -1,8 +1,8 @@
 package com.sample.easykart.ui.navigation
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material.BottomNavigation
@@ -11,19 +11,18 @@ import androidx.compose.material.Icon
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.NavigationBarItemDefaults
+import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
@@ -31,13 +30,13 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
-import androidx.navigation.compose.navigation
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.sample.easykart.R
 import com.sample.easykart.ui.screens.productdetail.ProductDetailScreen
 import com.sample.easykart.ui.screens.productlist.ProductListScreen
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AppContent() {
     val items = listOf(
@@ -50,6 +49,27 @@ fun AppContent() {
     val showBottomBar =
         navController.currentBackStackEntryAsState().value?.destination?.route in items.map { it.route }
     Scaffold(
+        topBar = {
+            TopAppBar(title = {
+                Text(
+                    text = stringResource(id = R.string.app_name),
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.fillMaxWidth(1f)
+                )
+            }, colors = TopAppBarDefaults.mediumTopAppBarColors(
+                containerColor = MaterialTheme.colorScheme.primary,
+                titleContentColor = MaterialTheme.colorScheme.onPrimary,
+                navigationIconContentColor = MaterialTheme.colorScheme.onPrimary,
+                actionIconContentColor = MaterialTheme.colorScheme.onSecondary
+            ),
+                navigationIcon = {
+                    if (!showBottomBar) {
+                        IconButton(onClick = { navController.popBackStack() }) {
+                            Icon(Icons.Filled.ArrowBack, null)
+                        }
+                    }
+                })
+        },
         bottomBar = {
             if (showBottomBar) {
                 BottomNavigation(backgroundColor = MaterialTheme.colorScheme.background) {
@@ -103,9 +123,7 @@ fun AppContent() {
                 })
             ) { backStackEntry ->
                 val id = backStackEntry.arguments?.getString("id") ?: "1"
-                ProductDetailScreen() {
-                    navController.popBackStack()
-                }
+                ProductDetailScreen()
             }
         }
     }

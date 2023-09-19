@@ -32,20 +32,6 @@ fun ProductListScreen(onDetailClick: (ProductItem) -> Unit) {
 
     Column(modifier = Modifier) {
 
-        TopAppBar(
-            title = {
-                Text(
-                    text = stringResource(id = R.string.app_name),
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier.fillMaxWidth(1f)
-                )
-            }, colors = TopAppBarDefaults.mediumTopAppBarColors(
-                containerColor = MaterialTheme.colorScheme.primary,
-                titleContentColor = MaterialTheme.colorScheme.onPrimary,
-                navigationIconContentColor = MaterialTheme.colorScheme.onPrimary,
-                actionIconContentColor = MaterialTheme.colorScheme.onSecondary
-            )
-        )
         LazyVerticalGrid(
             columns = GridCells.Fixed(2)
         ) {
