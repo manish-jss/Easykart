@@ -39,7 +39,7 @@ import com.sample.easykart.ui.screens.productdetail.ProductDetailScreen
 import com.sample.easykart.ui.screens.productlist.ProductListScreen
 
 @Composable
-fun BottomBar() {
+fun AppContent() {
     val items = listOf(
         Screen.Home,
         Screen.Favourite,
