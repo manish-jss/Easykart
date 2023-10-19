@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.sample.easykart.data.model.ProductItem
 import com.sample.easykart.data.reprository.ProductRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -17,7 +18,7 @@ class ProductDetailViewModel @Inject constructor(private val savedStateHandle: S
 
     init {
         val argument = savedStateHandle.get<String>("id").orEmpty()
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             repository.getProductDetail(argument)
         }
     }

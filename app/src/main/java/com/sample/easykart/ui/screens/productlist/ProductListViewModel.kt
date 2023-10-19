@@ -5,6 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.sample.easykart.data.model.ProductItem
 import com.sample.easykart.data.reprository.ProductRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -15,7 +16,7 @@ class ProductListViewModel @Inject constructor(private val repository: ProductRe
         get() = repository.productList
 
     init {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             repository.getProductList()
         }
     }
